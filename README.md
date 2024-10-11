@@ -1,4 +1,4 @@
-# Website for paper: Can LLMs Solve Molecule Puzzles? A MultimodalBenchmark for Molecular Structure Elucidation
+# Website for the paper: Can LLMs Solve Molecule Puzzles? A MultimodalBenchmark for Molecular Structure Elucidation
 
 This website is adapted from [Nerfies website](https://nerfies.github.io).
 
