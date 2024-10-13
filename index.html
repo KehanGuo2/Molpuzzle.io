@@ -535,6 +535,70 @@
               <p>Tasks in stage 1 are SI: Saturation Identification, ARI: Aromatic Ring Identification, FGI: Functional Group Identification, and SDC: Saturation Degree Calculation.</p>
               </caption>
         </div>
+        <h3 class="subtitle is-4 left-align">Addressing entire molecule puzzles</h3>
+        <div class="content has-text-justified">
+          <p> For solving the entire molecule puzzles, the evaluation is limited to the three most advanced multimodal LMMs: GPT-4o, Claude-3-opus, and Gemini-pro, due to the involvement of spectrum image analysis in Stage 2. </p>
+          <table border="1" cellspacing="0" cellpadding="5">
+            <caption><strong>Table 2: The performance of LLMs and human baseline in solving MolPuzzle. The best LLM results are in bold font. Acc. stands for the Accuracy of Exact Match.</strong></caption>
+            <thead>
+              <tr>
+                <th style="text-align: center;">Method</th>
+                <th style="text-align: center;">Acc. (↑)</th>
+                <th style="text-align: center;">Levenshtein (↓)</th>
+                <th style="text-align: center;">Validity (↑)</th>
+                <th style="text-align: center;">MACCS FTS (↑)</th>
+                <th style="text-align: center;">RDK FTS (↑)</th>
+                <th style="text-align: center;">Morgan FTS (↑)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center;">GPT-4o</td>
+                <td style="text-align: center;"><strong>0.014±0.004</strong></td>
+                <td style="text-align: center;"><strong>11.653±0.013</strong></td>
+                <td style="text-align: center;"><strong>1.000±0.000</strong></td>
+                <td style="text-align: center;"><strong>0.431±0.009</strong></td>
+                <td style="text-align: center;"><strong>0.293±0.013</strong></td>
+                <td style="text-align: center;">0.232±0.007</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Claude-3-opus</td>
+                <td style="text-align: center;">0.013±0.008</td>
+                <td style="text-align: center;">12.680±0.086</td>
+                <td style="text-align: center;"><strong>1.000±0.000</strong></td>
+                <td style="text-align: center;">0.383±0.050</td>
+                <td style="text-align: center;">0.264±0.040</td>
+                <td style="text-align: center;">0.241±0.037</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Gemini-pro</td>
+                <td style="text-align: center;">0.000±0.000</td>
+                <td style="text-align: center;">12.711±0.196</td>
+                <td style="text-align: center;"><strong>1.000±0.000</strong></td>
+                <td style="text-align: center;">0.340±0.017</td>
+                <td style="text-align: center;">0.208±0.002</td>
+                <td style="text-align: center;">0.171±0.007</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Human</td>
+                <td style="text-align: center;">0.667±0.447</td>
+                <td style="text-align: center;">1.332±2.111</td>
+                <td style="text-align: center;"><strong>1.000±0.000</strong></td>
+                <td style="text-align: center;"><strong>0.985±0.022</strong></td>
+                <td style="text-align: center;">0.795±0.317</td>
+                <td style="text-align: center;">0.810±0.135</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+
+
+        </div>
+
         <!--/ Introduction. -->
       </div>
     </section>
