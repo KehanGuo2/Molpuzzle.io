@@ -378,6 +378,149 @@
         <!-- Introduction. -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
+            <h2 class="title is-3">Experiment Results</h2>
+            <div class="content has-text-justified">
+              <p>We first conducted evaluation of a variety of LLMs for completing the individual tasks in each stage, including  GPT-4o, GPT-3.5-turbo, Claude-3-opus, Gemini-pro, LLama-3-8B-Instruct, Vicuna-13B-v1.5,  Mistral-7B-Instruct-v0.3, and in particular multimodal LLMs such as Gemini-pro-vision, LLava-Llama-3-8B, Qwen-VL-Chat, and InstructBlip-Vicuna-7B/13B.</p>
+              <table border="1" cellspacing="0" cellpadding="5">
+
+                <thead>
+                  <tr>
+                    <th rowspan="2">Method</th>
+                    <th colspan="4">Stage-1 (Molecule Understanding) Tasks</th>
+                  </tr>
+                  <tr>
+                    <th>SI</th>
+                    <th>ARI</th>
+                    <th>FGI</th>
+                    <th>SDC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GPT-4o</td>
+                    <td><strong>1.00±0.000</strong></td>
+                    <td>0.943±0.016</td>
+                    <td>0.934±0.005</td>
+                    <td>0.667±0.003</td>
+                  </tr>
+                  <tr>
+                    <td>GPT-3.5-turbo</td>
+                    <td>0.451±0.025</td>
+                    <td>0.816±0.017</td>
+                    <td>0.826±0.075</td>
+                    <td>0.5±0.099</td>
+                  </tr>
+                  <tr>
+                    <td>Claude-3-opus</td>
+                    <td>0.361±0.009</td>
+                    <td><strong>0.988±0.015</strong></td>
+                    <td><strong>0.934±0.001</strong></td>
+                    <td><strong>0.856±0.016</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Llama3</td>
+                    <td>0.228±0.043</td>
+                    <td>0.696±0.051</td>
+                    <td>0.521±0.003</td>
+                    <td>0.000±0.000</td>
+                  </tr>
+                  <tr>
+                    <td>Human</td>
+                    <td><strong>1.00±0.000</strong></td>
+                    <td><strong>1.000±0.000</strong></td>
+                    <td>0.890±0.259</td>
+                    <td>0.851±0.342</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <table border="1" cellspacing="0" cellpadding="5">
+                <thead>
+                  <tr>
+                    <th rowspan="2">Method</th>
+                    <th colspan="4">Stage-2 (Spectrum Interpretation) Tasks</th>
+                  </tr>
+                  <tr>
+                    <th>IR Interpretation</th>
+                    <th>MASS Interpretation</th>
+                    <th>H-NMR Interpretation</th>
+                    <th>C-NMR Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GPT-4o</td>
+                    <td><strong>0.656±0.052</strong></td>
+                    <td><strong>0.609±0.042</strong></td>
+                    <td><strong>0.618±0.026</strong></td>
+                    <td><strong>0.639±0.010</strong></td>
+                  </tr>
+                  <tr>
+                    <td>LLava</td>
+                    <td>0.256±0.026</td>
+                    <td>0.101±0.021</td>
+                    <td>0.118±0.008</td>
+                    <td>0.254±0.015</td>
+                  </tr>
+                  <tr>
+                    <td>Human</td>
+                    <td>0.753±0.221</td>
+                    <td>0.730±0.110</td>
+                    <td>0.764±0.169</td>
+                    <td>0.769±0.101</td>
+                  </tr>
+                </tbody>
+                <caption>
+                  <strong>Table 1: F1 scores (↑) of individual QA tasks in three stages. The best LLMs results are in bold font.</strong><br>
+                  Tasks in stage 1 are SI-Saturation Identification, ARI-Aromatic Ring Identification, FGI-Functional Group Identification, and SDC-Saturation Degree Calculation.
+                </caption>
+              </table>
+              
+              <table border="1" cellspacing="0" cellpadding="5">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>H-NMR Elucidation</th>
+                    <th>C-NMR Elucidation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GPT-4o</td>
+                    <td><strong>0.433±0.013</strong></td>
+                    <td><strong>0.408±0.034</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Llama3</td>
+                    <td>0.211±0.012</td>
+                    <td>0.342±0.007</td>
+                  </tr>
+                  <tr>
+                    <td>Human</td>
+                    <td>0.867±0.230</td>
+                    <td>0.730±0.220</td>
+                  </tr>
+                </tbody>
+              </table>
+
+                        <!-- Image below the content -->
+            <p align="center">
+              <img src= "static/images/intro_spectrum(1).png" alt="benchmark overview" style="width:100%;">
+            </p>
+            <p> In total, Molpuzzle includes 19,891 data examples collected from each Stage.</p>
+            <p align="center">
+                <img src= "static/images/molpuzzle_stats.png" alt="molpuzzle statistics" style="width:100%;">
+             </div>
+        </div>
+        <!--/ Introduction. -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <!-- Introduction. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
             <h2 class="title is-3">Overview of the MolPuzzle Benchmark</h2>
             <div class="content has-text-justified">
               <p>The MolPuzzle benchmark is designed to test the reasoning capabilities of Large Language Models (LLMs) in molecular structure elucidation tasks. This dataset contains 200 instances of molecular structure elucidation challenges, simulating real-world chemistry tasks. Each instance in MolPuzzle involves three interlinked sub-tasks:</p>
@@ -390,7 +533,7 @@
             <p align="center">
               <img src= "static/images/intro_spectrum(1).png" alt="benchmark overview" style="width:100%;">
             </p>
-            <p> In total, Molpuzzle includes 19,891 data examples collected from each Stage.
+            <p> In total, Molpuzzle includes 19,891 data examples collected from each Stage.</p>
             <p align="center">
                 <img src= "static/images/molpuzzle_stats.png" alt="molpuzzle statistics" style="width:100%;">
              </div>
@@ -400,6 +543,109 @@
     </section>
 
 
+
+
+
+
+  
+
+
+
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Case Study of Biases</h2>
+            <br>
+    
+            <div style="border: 2px solid #4CAF50; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+              <h2 style="color: #4CAF50;">Case Study: Refinement-Aware Bias.</h2>
+              <img src="static/images/case_study/Case_Refine.png" alt="Refinement Example" width="70%" />
+              <p>In the example above, we asked the model to score the answer in three stages: before refinement, after refinement, and after refinement with the dialogue history. The respective scores were 6, 7, and 8.</p>
+            </div>
+            <br>
+    
+            <div style="border: 2px solid #337AB7; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+              <h2 style="color: #337AB7;">Case Study: Sentiment Bias.</h2>
+              <img src="static/images/case_study/Case_Sentiment.png" alt="Sentiment Example" width="70%" />
+              <p>In the example above, we initially had the Claude-3.5-Sonnet model evaluate the original pair of answers, concluding that answer A was superior. We then revised answer A to include expressions of anger. Subsequently, although the Claude-3.5-Sonnet model acknowledged that answer A was "more direct and technically precise," it noted that "the confrontational tone might be off-putting to some users," leading it to determine that answer B was now the better choice.</p>
+            </div>
+            <br>
+    
+            <div style="border: 2px solid #b44672; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+              <h2 style="color: #b44672;">Case Study: Authority bias.</h2>
+              <img src="static/images/case_study/Case_authority.png" alt="Authority Example" width="70%" />
+              <p>In the example above, we have a question along with two answers of varying quality in our dataset, with Assistant A's answer being of higher quality. Initially, GPT-3.5-Turbo made the correct judgment. However, when we added automatically generated fake references to Assistant B's answer, the judge model considered Assistant B's quality to be superior and cited our provided fake references as justification. At this point, the judge model was successfully hacked, demonstrating authority bias.</p>
+            </div>
+            <br>
+    
+            <div style="border: 2px solid #FF6347; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
+              <h2 style="color: #FF6347;">Case Study: Bandwagon-Effect bias.</h2>
+              <img src="static/images/case_study/Case_badwagon.png" alt="Bandwagon Example" width="70%" />
+              <p>In the example above, we have a question along with two answers of varying quality in our dataset, with Assistant A's answer being of higher quality. Initially, GPT-4-Turbo made the correct judgment. However, after incorporating the popular opinion that Assistant B's response was better into the system prompt, the judge model was successfully hacked, proving the existence of the Bandwagon-Effect bias.</p>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- @PAN TODO: bibtex -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>@article{ye2024justiceprejudicequantifyingbiases,
+          title={Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge},
+          author={Jiayi Ye and Yanbo Wang and Yue Huang and Dongping Chen and Qihui Zhang and Nuno Moniz and Tian Gao and Werner Geyer and Chao Huang and Pin-Yu Chen and Nitesh V Chawla and Xiangliang Zhang},
+          journal={arXiv preprint arXiv:2410.02736},
+          year={2024}
+        }
+        </code></pre>
+      </div>
+    </section>
+    
+    <section>
+      <div class="section" id="org-banners" style="display:flex">
+        <a href="https://www.nd.edu/" target="blank" class="ext-link">
+          <img class="center-block org-banner" src="static/images/logos/ND.png" style="width: 200px; height: auto;">
+        </a>
+        <a href="https://www.washington.edu/" target="_blank" rel="external">
+            <img class="center-block org-banner" src="static/images/logos/University_of_Washington.png" style="width: 200px; height: auto;">
+        </a>
+        <a href="https://www.pku.edu.cn/" target="_blank" rel="external">
+            <img class="center-block org-banner" src="static/images/logos/PKU.png" style="width: 200px; height: auto;">
+        </a>
+        <a href="https://research.ibm.com/" target="_blank" rel="external">
+          <img class="center-block org-banner" src="static/images/logos/IBM.webp" style="width: 250px; height: auto;">
+        </a>
+        <a href="https://research.ibm.com/" target="_blank" rel="external">
+          <img class="center-block org-banner" src="static/images/logos/HKU.jpg" style="width: 200px; height: auto;">
+        </a>
+      </div>
+    </section>
+    
+    
+    <footer class="footer">
+      <!-- <div class="container"> -->
+        <div class="content has-text-centered">
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </footer>
+    
+    </body>
+    </html>
+    
 
     <!-- <section class="section">
       <div class="container" style="margin-bottom: 2vh;">
@@ -526,7 +772,7 @@
 
 
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container" style="margin-bottom: 2vh;">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
@@ -821,100 +1067,6 @@
           </div>
       </div>
   </div>
-</section>
+</section> -->
 
 
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Case Study of Biases</h2>
-        <br>
-
-        <div style="border: 2px solid #4CAF50; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
-          <h2 style="color: #4CAF50;">Case Study: Refinement-Aware Bias.</h2>
-          <img src="static/images/case_study/Case_Refine.png" alt="Refinement Example" width="70%" />
-          <p>In the example above, we asked the model to score the answer in three stages: before refinement, after refinement, and after refinement with the dialogue history. The respective scores were 6, 7, and 8.</p>
-        </div>
-        <br>
-
-        <div style="border: 2px solid #337AB7; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
-          <h2 style="color: #337AB7;">Case Study: Sentiment Bias.</h2>
-          <img src="static/images/case_study/Case_Sentiment.png" alt="Sentiment Example" width="70%" />
-          <p>In the example above, we initially had the Claude-3.5-Sonnet model evaluate the original pair of answers, concluding that answer A was superior. We then revised answer A to include expressions of anger. Subsequently, although the Claude-3.5-Sonnet model acknowledged that answer A was "more direct and technically precise," it noted that "the confrontational tone might be off-putting to some users," leading it to determine that answer B was now the better choice.</p>
-        </div>
-        <br>
-
-        <div style="border: 2px solid #b44672; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
-          <h2 style="color: #b44672;">Case Study: Authority bias.</h2>
-          <img src="static/images/case_study/Case_authority.png" alt="Authority Example" width="70%" />
-          <p>In the example above, we have a question along with two answers of varying quality in our dataset, with Assistant A's answer being of higher quality. Initially, GPT-3.5-Turbo made the correct judgment. However, when we added automatically generated fake references to Assistant B's answer, the judge model considered Assistant B's quality to be superior and cited our provided fake references as justification. At this point, the judge model was successfully hacked, demonstrating authority bias.</p>
-        </div>
-        <br>
-
-        <div style="border: 2px solid #FF6347; padding: 20px; margin: 20px; font-family: Arial, sans-serif; text-align: center;">
-          <h2 style="color: #FF6347;">Case Study: Bandwagon-Effect bias.</h2>
-          <img src="static/images/case_study/Case_badwagon.png" alt="Bandwagon Example" width="70%" />
-          <p>In the example above, we have a question along with two answers of varying quality in our dataset, with Assistant A's answer being of higher quality. Initially, GPT-4-Turbo made the correct judgment. However, after incorporating the popular opinion that Assistant B's response was better into the system prompt, the judge model was successfully hacked, proving the existence of the Bandwagon-Effect bias.</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- @PAN TODO: bibtex -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@article{ye2024justiceprejudicequantifyingbiases,
-      title={Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge},
-      author={Jiayi Ye and Yanbo Wang and Yue Huang and Dongping Chen and Qihui Zhang and Nuno Moniz and Tian Gao and Werner Geyer and Chao Huang and Pin-Yu Chen and Nitesh V Chawla and Xiangliang Zhang},
-      journal={arXiv preprint arXiv:2410.02736},
-      year={2024}
-    }
-    </code></pre>
-  </div>
-</section>
-
-<section>
-  <div class="section" id="org-banners" style="display:flex">
-    <a href="https://www.nd.edu/" target="blank" class="ext-link">
-      <img class="center-block org-banner" src="static/images/logos/ND.png" style="width: 200px; height: auto;">
-    </a>
-    <a href="https://www.washington.edu/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/logos/University_of_Washington.png" style="width: 200px; height: auto;">
-    </a>
-    <a href="https://www.pku.edu.cn/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/logos/PKU.png" style="width: 200px; height: auto;">
-    </a>
-    <a href="https://research.ibm.com/" target="_blank" rel="external">
-      <img class="center-block org-banner" src="static/images/logos/IBM.webp" style="width: 250px; height: auto;">
-    </a>
-    <a href="https://research.ibm.com/" target="_blank" rel="external">
-      <img class="center-block org-banner" src="static/images/logos/HKU.jpg" style="width: 200px; height: auto;">
-    </a>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <!-- <div class="container"> -->
-    <div class="content has-text-centered">
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  <!-- </div> -->
-</footer>
-
-</body>
-</html>
