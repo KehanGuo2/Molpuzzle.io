@@ -372,7 +372,30 @@
       </div>
     </section>
 
+
     <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <!-- Introduction. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview of the MolPuzzle Benchmark</h2>
+            <div class="content has-text-justified">
+              <p>The MolPuzzle benchmark is designed to test the reasoning capabilities of Large Language Models (LLMs) in molecular structure elucidation tasks. This dataset contains 200 instances of molecular structure elucidation challenges, simulating real-world chemistry tasks. Each instance in MolPuzzle involves three interlinked sub-tasks:</p>
+              <ul>
+                <li><strong>Molecule Understanding:</strong> This stage evaluates the model’s ability to identify and understand basic molecular structures, starting from the molecular formula derived from mass spectrometry data. The dataset includes questions about the degree of saturation, aromatic rings, and functional groups, helping the model narrow down possible molecular structures.</li>
+                <li><strong> Spectrum Interpretation:</strong> This stage involves analyzing multimodal data, including IR, MASS, 1H-NMR, and 13C-NMR spectra. These spectral images provide critical information about functional groups, molecular mass, and the arrangement of atoms. The dataset challenges models to integrate these clues and refine molecular hypotheses based on the spectral data.</li>
+                <li><strong>Molecule Construction:</strongs> In this final stage, the models attempt to assemble the molecule based on the information gathered from previous steps. This involves constructing a valid molecular structure that fits the constraints provided by the NMR data.</li>
+              </ul>
+
+             </div>
+        </div>
+        <!--/ Introduction. -->
+      </div>
+    </section>
+
+
+
+    <!-- <section class="section">
       <div class="container" style="margin-bottom: 2vh;">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
@@ -493,7 +516,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+
+
     <section class="section">
       <div class="container" style="margin-bottom: 2vh;">
         <div class="columns is-centered has-text-centered">
