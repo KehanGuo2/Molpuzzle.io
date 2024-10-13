@@ -24,7 +24,7 @@ body {
     font-size: 16px;
     line-height: 110%;
     color: var(--body-font);
-    background-color: rgb(0, 6, 36);
+    background-color: rgba(204, 214, 212, 223);
 }
 
 strong {
